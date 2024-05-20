@@ -48,7 +48,7 @@ User registration is not forward facing and can only be performed by a superuser
 
 ## Guidelines and Limitations
 
-Add your API key on line 10 in `.\application\learn\views.py`. Switch between Davinci and GPT-4 on lines 242/243 and 254/255 in the same file.
+Add your API key on line 10 in `.\application\learn\views.py`. Edit the system prompt on line 16. Switch between Davinci and GPT-4 on lines 242/243 and 254/255.
 
 Install SQLiteViewer extension (VSCode) to view database in IDE. You can also view Learn_Session and Learn_Message entries in the [Admin Panel](http://127.0.0.1:8000//admin).
 

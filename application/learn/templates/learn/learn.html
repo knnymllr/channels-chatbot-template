@@ -1,0 +1,83 @@
+{% extends 'layouts/base.html' %} 
+{% block title %}Learn Module | Interview Chatbot{% endblock %} 
+{% block body_class %}body-learn{% endblock %} 
+
+{% block content %}
+<button class="collapse-history"><i class="fa fa-folder"></i></button>
+<main>
+  <div class="chat-two-col">
+    <section class="two-col-left">
+      <div class="sessions-scrollbar hidden">
+          {% for session_id, session_data in previous_sessions.items reversed %}
+            {% if session_data.messages %}
+              <li class="session-history-date">
+                {{ session_data.date }} 
+                <ul>
+                    {% for message in session_data.messages reversed %}
+                      <li class="session-history-message">You: {{  message.message }}</li>
+                      {% if message.edited %}
+                        <li class="session-history-edit">You (Edited): {{  message.edited }}</li>
+                      {% endif %}
+                      <li class="session-history-response">Marta: {{  message.response }}</li>
+                    {% endfor %}
+                  {% endif %}
+                </ul>
+              </li>
+            {% endfor %}
+      </div>
+    </section>
+    <section class="two-col-right">
+      <div class="settings-container">
+        <h1>Learn Module</h1>
+        <div class="settings">
+          <input type="checkbox" class="checkbox" id="checkbox">
+          <label data-tooltip="Dark Mode" for="checkbox" class="checkbox-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+          </label>
+          <input type="checkbox" class="dyslexic-checkbox" id="dyslexic-checkbox">
+          <label data-tooltip="OpenDyslexic Font" for="dyslexic-checkbox" class="dyslexic-checkbox-label">
+            <span class="sans-serif">D</span>
+            <span class="dyslexic">D</span>
+            <span class="ball"></span>
+          </label>
+        </div>
+      </div>
+      <div class="messages-scrollbar" id="scroller">
+        <ul class="messages-list">
+          <div class="message-container">
+            {% load static %}<img src="{% static 'media/robot.png' %}" alt="Robot Avatar" class="avatar-ai" />
+            <li class="message received">
+              <div class="message-text">
+                <p class="message-sender">
+                  <b>Marta</b>
+                </p>
+                <p class="message-content">
+                Hi {{ user.first_name }}, my name is Marta. I am an AI Chatbot. You can ask me
+                anything.
+                </p>
+              </div>
+            </li>
+          </div>
+        </ul>
+        <div id="anchor"></div>
+      </div>
+    </section>
+  </div>
+  <section class="new-message-section">
+    <form class="new-message-form">
+      {%csrf_token%}
+      <div class="input-group">
+        <input
+          type="text"
+          class="new-message-input"
+          placeholder="Type your message here"
+        />
+        <button type="submit" class="btn btn-primary btn-send">Send</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+{% endblock %}

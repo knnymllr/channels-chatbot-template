@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Module | Land of Oz</title>
+  </head>
+  <body>
+    <main>
+      <h1>Control Panel</h1>
+      <form>
+        {%csrf_token%}
+        <button id="approve-message">Approve</button>
+        <button id="reject-message">Reject</button>
+        <button id="edit-message">Edit</button>
+      </form>
+      <div id="messages">
+        <p id="message"></p>
+        <textarea id="edit-textarea"></textarea>
+      </div>
+      <form>
+        {%csrf_token%}
+        <button id="edit-complete">Complete</button>
+      </form>
+    </main>
+    <script src="{% static 'js/oz.js' %}" defer></script>
+  </body>
+</html>

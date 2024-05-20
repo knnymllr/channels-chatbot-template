@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %} 
+{% block title %}Login | Interview Chatbot{% endblock %} 
+{% block body_class %}body-login{% endblock %} 
+
+{% block content %}
+<main>
+  <section>
+    <h1 class="center">Login</h1>
+    <form class="form-with-validation" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <button class="form-submit">Submit</button>
+    </form>
+  </section>
+</main>
+{% endblock %}

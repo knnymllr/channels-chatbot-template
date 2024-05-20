@@ -1,0 +1,110 @@
+:root {
+    --sent:#CFD8DC;
+    --sent-dark: #37474F;
+    --received: #EEEEEE;
+    --received-dark: #212121;
+}
+
+.session-history-date {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    list-style: none;
+}
+.session-history-message, .session-history-edit {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    max-width:600px;
+}
+.session-history-response {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    max-width:600px;
+}
+
+.messages-list {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 1000px;
+    padding-left: 0;
+    margin: auto;
+}
+
+.message-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.message-content {
+    margin-bottom: 1rem;
+}
+
+.message {
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.message-text {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sent {
+    background-color: var(--sent);
+    align-self: flex-start;
+    max-width: 600px;
+    transition: background 0.5s linear;
+}
+
+.sent.dark {
+    background-color: var(--sent-dark);
+}
+
+.sent-end {
+    align-self: flex-end
+}
+
+.received {
+    background-color: var(--received);
+    align-self: flex-start;
+    max-width: 600px;
+    transition: background 0.5s linear;}
+
+.received.dark {
+    background-color: var(--received-dark);
+}
+
+.new-message-section {
+    flex: 0.1;
+    background-color: #F5F5F5;
+    height: 100%;
+    padding:1rem;
+}
+
+.new-message-form {
+    height: 100%;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-message-input {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 0 1rem;
+
+}
+
+.btn-send {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 1rem;
+}

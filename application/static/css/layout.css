@@ -1,0 +1,224 @@
+/** @see https://medium.com/eightshapes-llc/light-dark-9f8ea42c9081 */
+
+:root {
+    --history-color: #455A64;
+    --history-hover: #90A4AE;
+    --tc-left: #CFD8DC;
+    --tc-left-dark: #263238;
+    --dot-color: #607D8B;
+}
+
+.body-login {
+    display: grid;
+    place-content: center;
+}
+
+.body-chat {
+    overflow: hidden;
+}
+
+.chat-two-col {
+    flex:0.9;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    transition: grid-template-columns 0.25s ease-in-out;
+}
+
+/** https://codepen.io/N-Cristina/pen/qBbWvmJ */
+.collapse-history {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--history-color);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 4px;
+    border-radius: 4px;
+}
+
+.collapse-history:hover {
+    background-color: var(--history-hover);
+}
+
+.chat-two-col.expanded {
+    grid-template-columns: 1fr 1fr;
+}
+
+.two-col-right {
+    background: whitesmoke;
+    color: black;
+    padding: 25px;
+    transition: background 0.5s linear;
+}
+
+.two-col-right.dark {
+    background: black;
+    color: whitesmoke;
+}
+
+.two-col-right h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.two-col-left {
+    background: var(--tc-left);
+    color: black;
+    transition: width 1s ease-in-out;
+    transition: background 0.5s linear;
+}
+
+.two-col-left.dark {
+    background: var(--tc-left-dark);
+    color: whitesmoke;
+}
+
+.messages-scrollbar {
+    height: 60vh;
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sessions-scrollbar {
+    height: 60vh;
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 100px 0 0 40px;
+    padding-bottom: 40px;
+}
+
+.sessions-scrollbar ul {
+    list-style: none;
+}
+
+.avatar-ai {
+    height: 75px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.avatar-user {
+    height: 125px;
+    width: auto;
+    margin-left: 1rem;
+}
+
+.settings-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.settings {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/** CHECKBOX @see https://codepen.io/Umer_Farooq/pen/eYJgKGN */
+.checkbox,
+.dyslexic-checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label,
+.dyslexic-checkbox-label {
+    background-color: #111;
+    color: white;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball,
+.dyslexic-checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.5s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball,
+.dyslexic-checkbox:checked+.dyslexic-checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+/** @see https://codepen.io/nzbin/pen/GGrXbp */
+.stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+    margin: 0 -5%;
+    overflow: hidden;
+}
+
+.dot-typing {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--dot-color);
+    color: var(--dot-color);
+    box-shadow: 9984px 0 0 0 var(--dot-color), 9999px 0 0 0 var(--dot-color), 10014px 0 0 0 var(--dot-color);
+    animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+    0% {
+        box-shadow: 9984px 0 0 0 var(--dot-color), 9999px 0 0 0 var(--dot-color), 10014px 0 0 0 var(--dot-color);
+    }
+
+    16.667% {
+        box-shadow: 9984px -10px 0 0 var(--dot-color), 9999px 0 0 0 var(--dot-color), 10014px 0 0 0 var(--dot-color);
+    }
+
+    33.333% {
+        box-shadow: 9984px 0 0 0 var(--dot-color), 9999px 0 0 0 var(--dot-color), 10014px 0 0 0 var(--dot-color);
+    }
+
+    50% {
+        box-shadow: 9984px 0 0 0 var(--dot-color), 9999px -10px 0 0 var(--dot-color), 10014px 0 0 0 var(--dot-color);
+    }
+
+    66.667% {
+        box-shadow: 9984px 0 0 0 var(--dot-color), 9999px 0 0 0 var(--dot-color), 10014px 0 0 0 var(--dot-color);
+    }
+
+    83.333% {
+        box-shadow: 9984px 0 0 0 var(--dot-color), 9999px 0 0 0 var(--dot-color), 10014px -10px 0 0 var(--dot-color);
+    }
+
+    100% {
+        box-shadow: 9984px 0 0 0 var(--dot-color), 9999px 0 0 0 var(--dot-color), 10014px 0 0 0 var(--dot-color);
+    }
+}

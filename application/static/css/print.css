@@ -1,0 +1,29 @@
+@media print {
+  
+    body {
+      font: 12pt Georgia, "Times New Roman", Times, serif;
+      line-height: 1.3;
+    }
+  
+    /** Classes that shouldn't be printed out go here */
+    /*
+    .some-class, .another-one
+    {
+      display: none;
+    } */
+  
+    a {
+      color: #000!important;
+    }
+  
+    a:before {
+      content:" (" attr(href) ") "!important; /** Display links */
+      font-size: 0.8rem;
+      font-weight: normal;
+    }
+  
+    a:after {
+      content: '';
+    }
+  
+  }

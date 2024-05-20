@@ -1,0 +1,38 @@
+/** @see https://github.com/cathydutton/cathydutton.co.uk/blob/master/src/site/_includes/css/1-settings/fonts.css */
+
+@font-face {
+    font-display: swap;
+    font-family: 'OpenDyslexic';
+    font-weight: 400;
+    src: url("../fonts/OpenDyslexicAlta-Regular.otf");
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: 'OpenDyslexic';
+    font-style: italic;
+    src: url("../fonts/OpenDyslexicAlta-Italic.otf");
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: 'OpenDyslexic';
+    font-weight: 700;
+    src: url("../fonts/OpenDyslexicAlta-Bold.otf");
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: OpenDyslexic;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/OpenDyslexicAlta-BoldItalic.otf");
+  }
+  
+  .dyslexic {
+    font-family: OpenDyslexic, sans-serif;
+  }
+
+  .sans-serif {
+    font-family: sans-serif;
+  }

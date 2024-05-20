@@ -1,6 +1,8 @@
 # Channels Chatbot Template
 
-This is a simple example of a chatbot application built with [Django](https://docs.djangoproject.com/en/5.0/) for storing conversations between a user and a chatbot. The chatbot accepts a customizable system prompt to limit the scope of the chatbot's answers on a particular subject. It was developed for the purposes of research and was designed with local hosting in mind. 
+This is a simple example of a chatbot application built with [Django](https://docs.djangoproject.com/en/5.0/) and [Channels](https://channels.readthedocs.io/en/latest/) for storing conversations between a user and a chatbot. The chatbot accepts a customizable system prompt to limit the scope of the chatbot's answers on a particular subject. It was developed for the purposes of research and was designed with local hosting in mind. 
+
+This version of the chatbot features a control panel at [localhost:8000/learn/oz/](localhost:8000/learn/oz/) for human approval/denial before submitting message to OpenAI. This feature was designed with HIPAA compliance in mind.
 
 **OPENAI IS NOT HIPAA COMPLIANT. SEE AZURE [REPOSITORY](https://github.com/knnymllr/azure-chatbot-template).**
 

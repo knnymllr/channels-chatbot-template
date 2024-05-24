@@ -41,7 +41,7 @@ chatSocket.onmessage = function (e) {
           <li class="message received dark">
             <div class='message-text'>
               <p class='message-sender'>
-                <b>Marta</b>
+                <b>Chatbot</b>
               </p>
               <p class='message-content'>
                 ${response}
@@ -59,7 +59,7 @@ chatSocket.onmessage = function (e) {
           <li class="message received">
             <div class='message-text'>
               <p class='message-sender'>
-                <b>Marta</b>
+                <b>Chatbot</b>
               </p>
               <p class='message-content'>
                 ${response}
@@ -78,7 +78,7 @@ chatSocket.onmessage = function (e) {
               <li class="message received dark">
                 <div class='message-text'>
                   <p class='message-sender'>
-                      <b>Marta</b>
+                      <b>Chatbot</b>
                   </p>
                   <p class='message-content'>
                       ${response}
@@ -91,7 +91,7 @@ chatSocket.onmessage = function (e) {
               <li class="message received">
                 <div class='message-text'>
                   <p class='message-sender'>
-                      <b>Marta</b>
+                      <b>Chatbot</b>
                   </p>
                   <p class='message-content'>
                       ${response}

@@ -18,7 +18,7 @@
                       {% if message.edited %}
                         <li class="session-history-edit">You (Edited): {{  message.edited }}</li>
                       {% endif %}
-                      <li class="session-history-response">Marta: {{  message.response }}</li>
+                      <li class="session-history-response">Chatbot: {{  message.response }}</li>
                     {% endfor %}
                   {% endif %}
                 </ul>
@@ -51,10 +51,10 @@
             <li class="message received">
               <div class="message-text">
                 <p class="message-sender">
-                  <b>Marta</b>
+                  <b>Chatbot</b>
                 </p>
                 <p class="message-content">
-                Hi {{ user.first_name }}, my name is Marta. I am an AI Chatbot. You can ask me
+                Hi {{ user.first_name }}, I am an AI Chatbot. You can ask me
                 anything.
                 </p>
               </div>
